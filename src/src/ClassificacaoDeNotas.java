@@ -1,30 +1,26 @@
 import java.util.Scanner;
-import java.util.Set;
 
 public class ClassificacaoDeNotas {
 
-    public static void main(String[] args) {
+    public static void main (String[] args){
 
+       double nota = 0d;
 
         Scanner sc = new Scanner(System.in);
 
-        Integer nota1 = 0;
-        Integer nota2 = 0;
+        System.out.println("Insira sua nota :");
+         nota = sc.nextDouble();
 
-        System.out.println("informe o primeira nota :");
-        nota1 = sc.nextInt();
-
-        System.out.println("informe a segunda nota :");
-        nota2 = sc.nextInt();
-
-        if ((nota1 + nota2) / 2 >= 6)
-        {
-            System.out.println("voce passou");
-        } else{System.out.println("voce não passou");
-
-        }
+         if (nota > 10){
+             System.out.println("Insira uma nota valida");
+         }
+         else if (nota >= 9){
+             System.out.println("Exelente");
+         } else if (nota >= 7) {System.out.println("Bom");
+         } else if (nota >= 5) {System.out.println("Satisfatorio");
+         } else if (nota < 5) {System.out.println("Insatisfatorio");
+         }
     }
 }
-
 
 
